@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 Video Player Theme</title>
+
+  <!-- Player CSS -->
+  <link rel="stylesheet" href="player.css">
+</head>
+<body>
+  <!-- The HTML necessary for player and controls -->
+  <div id="video-container">
+    <video id="video" width="100%" height="100%">
+      <!-- Video here -->
+      <source src="video.mp4" type="video/mp4">
+        <p>Your browser doesn't support HTML5 video.</p>
+      </video>
+
+      <div id="video-controls">
+        <div class="seek-bar-wrapper" id="seek-bar-wrapper">
+          <input id="seek-bar" type="range" value="0" step="0.001">
+        </div>
+        <div class="controls">
+          <button type="button" id="play-pause" class="icon play"><span class="icon-play" aria-hidden="true"></span></button>
+          <p id="timeDisplay" class="time"><span id="timeCurrent" class="current">00:00:00</span> / <span id="timeDuration" class="duration">00:00:00</span></p>
+          <button type="button" id="mute" class="text mute">100</button>
+          <input type="range" id="volume-bar" value="100">
+          <button type="button" class="icon full-screen" id="fullscreen"><span class="icon-screen" aria-hidden="true"></span></button>
+          <button type="button" class="icon lights" id="lights"><span class="icon-sun" aria-hidden="true"></span></button>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+  </div>
+  <!-- Necessary to dim page behind video -->
+  <div id="page-cover"></div>
+
+  <!-- Player JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="player.js"></script>
+</body>
+</html>
